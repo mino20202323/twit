@@ -9,7 +9,7 @@ export default function PostCard({ post }) {
       <Text className="font-bold mb-1">{post.authorName}</Text>
       <Text>{post.content}</Text>
       <Text className="text-xs text-gray-500 mt-1">
-        {formatDistanceToNow(new Date(post.createdAt))} ago
+        {formatDistanceToNow(post.createdAt?.toDate())} ago
       </Text>
       <LikeButton postId={post.id} />
       <CommentBox postId={post.id} />

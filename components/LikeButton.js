@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Pressable, Text } from 'react-native';
-import { collection, deleteDoc, doc, onSnapshot, setDoc } from 'firebase/firestore';
+import { collection, deleteDoc, doc, onSnapshot, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -23,7 +23,7 @@ export default function LikeButton({ postId }) {
     if (liked) {
       await deleteDoc(likeRef);
     } else {
-      await setDoc(likeRef, { createdAt: Date.now() });
+      await setDoc(likeRef, { createdAt: serverTimestamp() });
     }
   };
 

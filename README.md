@@ -47,6 +47,7 @@ posts/{postId}/comments/{commentId} {
 2. Create a Firebase project and fill in the values in `config/firebase.js`.
 3. Run the project with `npm start`.
 
+
 ## Components
 
 - **PostCard** – displays a post with like button and comment box.
