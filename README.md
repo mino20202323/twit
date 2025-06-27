@@ -47,10 +47,6 @@ posts/{postId}/comments/{commentId} {
 2. Create a Firebase project and fill in the values in `config/firebase.js`.
 3. Run the project with `npm start`.
 
-### Troubleshooting
-
-If you see a Babel error like `.plugins is not a valid Plugin property`, make sure
-you have the latest `@babel/core` installed. This starter uses version `^7.24`.
 
 ## Components
 
